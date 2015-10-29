@@ -29,25 +29,29 @@ git clone https://github.com/digitalemil/PutZKProcessor.git
 
 Edit:
 nifi-example-bundles/pom.xml
-and let the parent's version reflect your nifi's version>
+and let the parent's version reflect your nifi's version:
+
 <parent>
         ...
 	<version>0.3.1-SNAPSHOT</version>
 </parent>
 
+
 Edit:
 nifi-example-bundles/nifi-example-utils-bundle/pom.xml
 and add the following module:
+
 <module>PutZKProcessor</module>
 
 Edit:
 nifi-example-bundles/nifi-example-utils-bundle/nifi-example-utils-nar/pom.xml
 Add the PutZKProcessor dependency:
-	<dependency>
-            <groupId>digitalemil.de</groupId>
-            <artifactId>PutZK</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+
+<dependency>
+           <groupId>digitalemil.de</groupId>
+           <artifactId>PutZK</artifactId>
+           <version>0.0.1-SNAPSHOT</version>
+</dependency>
 	
 do a
 mvn install
