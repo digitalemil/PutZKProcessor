@@ -22,17 +22,17 @@ cd nifi-example-bundles/nifi-example-utils-bundle
 git clone https://github.com/digitalemil/PutZKProcessor.git
 
 Edit:
-nifi-example-bundles/nifi-example-utils-bundle/pom.xml
-and add the following module:
-<module>PutZKProcessor</module>
-
-Edit:
 nifi-example-bundles/pom.xml
 and let the parent's version reflect your nifi's version>
 <parent>
         ...
 	<version>0.3.1-SNAPSHOT</version>
 </parent>
+
+Edit:
+nifi-example-bundles/nifi-example-utils-bundle/pom.xml
+and add the following module:
+<module>PutZKProcessor</module>
 
 Edit:
 nifi-example-bundles/nifi-example-utils-bundle/nifi-example-utils-nar/pom.xml
@@ -45,6 +45,7 @@ Add the PutZKProcessor dependency:
 	
 do a
 mvn install
+(in nifi-example-bundles)
 
 Copy the nar-file containing RenameJsonProcessor and PutZKProcessor into your nifi/lib folder of your binary installation:
 cp /nifi/nifi-nar-bundles/nifi-example-bundles/nifi-example-utils-bundle/nifi-example-utils-nar/target/nifi-example-utils-nar-0.0.1-SNAPSHOT.nar /opt/nifi-1.0.0.0-7/lib
