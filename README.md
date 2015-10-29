@@ -4,11 +4,17 @@ Simple Apache NiFi processor storing the content of a flowfile in Apache Zookeep
 Instructions:
 
 Build:
+
 Clone nifi:
+
 git clone https://github.com/apache/nifi.git
+
 build nifi:
+
 export MAVEN_OPTS="-Xmx2048m"
+
 mvn install
+
 If you see tests failing try:
 mvn -Dmaven.test.skip=true install
 
